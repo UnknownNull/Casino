@@ -2,9 +2,6 @@
 
 namespace UnknownNull\Casino;
 
-
-//use jojoe77777\FormAPI\CustomForm;
-//use jojoe77777\FormAPI\SimpleForm;
 use onebone\economyapi\EconomyAPI;
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
@@ -17,7 +14,6 @@ use Vecnavium\FormsUI\SimpleForm;
 
 class Casino extends PluginBase
 {
-
     protected Config $config;
     protected EconomyAPI $EconomyAPI;
 
@@ -48,30 +44,35 @@ class Casino extends PluginBase
 
             $amount = $data[0];
             $MyMoney = $this->EconomyAPI->myMoney(strtolower($player->getName()));
+            $Maximumamount = $this->config->getNested("Maximum-amount");
+            $Minimumamount = $this->config->getNested("Minimum-amount");
 
             if (isset($data[0])) {
-//                if (is_int((int)$amount)) {
-                    if ($amount <= $this->config->getNested("Maximum-amount") and $amount >= $this->config->getNested("Minimum-amount")) {
+                if (is_int((int)$amount)) {
+                    if ($amount <= $Maximumamount and $amount >= $Minimumamount) {
                         if ($MyMoney >= $amount) {
                             $this->TowFormCasino($player, $amount);
                         }else{
-                            $player->sendMessage("Error 1 !");
+                            $player->sendMessage("§4Your money is not enough!");
                         }
                     }else{
-                        $player->sendMessage("Error 2 !");
+                        $player->sendMessage("§4The amount of money you can place must be between $Minimumamount and $Maximumamount!");
                     }
-//                }
+                }else{
+                    $player->sendMessage("§4Enter an integer!");
+                }
             }else{
-                $player->sendMessage("Error 3 !");
+                $player->sendMessage("§4The amount of money was not entered!");
             }
 
             return true;
         });
         $MyMoney = $this->EconomyAPI->myMoney(strtolower($player->getName()));
-
+        $Maximumamount = $this->config->getNested("Maximum-amount");
+        $Minimumamount = $this->config->getNested("Minimum-amount");
 
         $form->setTitle("§l§6Casino");
-        $form->addInput("§9Your Money: §6$MyMoney\n§3Enter the amount you want to bet on:");
+        $form->addInput("§9Your Money: §6$MyMoney\nThe allowed range of the amount of money you can bet:$Minimumamount - $Maximumamount\n§3Enter the amount you want to bet on:");
         $player->sendForm($form);
     }
 
