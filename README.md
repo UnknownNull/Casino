@@ -14,8 +14,11 @@ Minimum-amount: 1000
 Maximum-amount: 10000000
 ```
 
-# Virions
+# Virion
 [FormsUI](https://poggit.pmmp.io/ci/Vecnavium/FormsUI/FormsUI)
+
+# Depend
+EconomyAPI
 
 # A word from the author
 Like this project to give me energy to continue and expand this plugin.
