@@ -72,7 +72,7 @@ class Casino extends PluginBase
         $Minimumamount = $this->config->getNested("Minimum-amount");
 
         $form->setTitle("§l§6Casino");
-        $form->addInput("§9Your Money: §6$MyMoney\nThe allowed range of the amount of money you can bet:$Minimumamount - $Maximumamount\n§3Enter the amount you want to bet on:");
+        $form->addInput("§9Your Money: §6$MyMoney\n§7The allowed range of the amount of money you can bet: §2$Minimumamount §7- §2$Maximumamount\n§3Enter the amount you want to bet on:");
         $player->sendForm($form);
     }
 
@@ -167,10 +167,10 @@ class Casino extends PluginBase
         });
         $form->setTitle("§l§6Casino");
         $form->setContent("§eTry your luck ;D");
-        $form->addButton("§l§3x2\n§r§050% Win rate");
-        $form->addButton("§l§3x3\n§r§0330% Win rate");
-        $form->addButton("§l§3x5\n§r§020% Win rate");
-        $form->addButton("§l§3x10\n§r§010% Win rate");
+        $form->addButton("§l§3x2\n§r§050 Percent Win rate");
+        $form->addButton("§l§3x3\n§r§030 Percent Win rate");
+        $form->addButton("§l§3x5\n§r§020 Percent Win rate");
+        $form->addButton("§l§3x10\n§r§010 Percent% Win rate");
         $form->addButton("§l§cCancel\n§r§0Click", 0, "textures/ui/cancel");
         $player->sendForm($form);
     }
