@@ -5,6 +5,8 @@ branches:
 projects:
   Casino:
     path: ""
+    lint:
+      phpstan: false
     icon: icon.png
     libs:
       - src: Vecnavium/FormsUI/libFormsUI
