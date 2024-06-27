@@ -1,7 +1,7 @@
 name: Casino
+main: UnknownNull\Casino\Casino
 api: [4.0.0, 5.0.0]
 version: 0.0.1
-main: UnknownNull\Casino\Casino
 author: UnknownNull
 website: https://github.com/UnknownNull
 description: Plugin Casino UI by UnknownNull (AREF)
