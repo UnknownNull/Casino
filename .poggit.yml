@@ -4,11 +4,11 @@ branches:
 - main
 projects:
    Casino:
-     path: ""
-     icon: icon.png
-     libs:
-       - src: Vecnavium/FormsUI/FormsUI
-         version: ^1.1.3
-     lint:
-       phpstan: false
+   path: ""
+   icon: icon.png
+   libs:
+     - src: Vecnavium/FormsUI/FormsUI
+       version: ^1.1.3
+   lint:
+     phpstan: false
 ...
