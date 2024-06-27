@@ -3,7 +3,7 @@ build-by-default: true
 branches:
 - main
 projects:
-    Casino:
+  Casino:
     path: ""
     icon: icon.png
     libs:
