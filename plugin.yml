@@ -1,6 +1,6 @@
 name: Casino
 main: UnknownNull\Casino\Casino
-api: [4.0.0, 5.0.0]
+api: 5.0.0
 version: 0.0.1
 author: UnknownNull
 website: https://github.com/UnknownNull
