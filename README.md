@@ -1,5 +1,6 @@
 # Casino
 Plugin Casino UI for Pocketmine-MP
+<img src="https://poggit.pmmp.io/shield.state/Casino">
 
 # Command
 /casino
